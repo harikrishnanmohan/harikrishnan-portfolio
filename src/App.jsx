@@ -8,11 +8,11 @@ import Intro from "./components/Intro/Intro";
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/harikrishnanmohan",
+      path: "/harikrishnan-portfolio",
       element: <Main />,
       children: [
         {
-          path: "/harikrishnanmohan",
+          path: "/harikrishnan-portfolio",
           element: <Intro />,
         },
       ],
