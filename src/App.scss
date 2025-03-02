@@ -30,3 +30,8 @@ body {
   padding-top: 70px;
   margin: 2rem;
 }
+.app__container {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
