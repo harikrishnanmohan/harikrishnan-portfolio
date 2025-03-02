@@ -62,10 +62,7 @@ const Header = () => {
     >
       <header className="header">
         <h1 className="header__logo">
-          <NavLink
-            className="anchor header__logo_content"
-            to="/harikrishnan-portfolio/"
-          >
+          <NavLink className="anchor header__logo_content" to="/">
             <div className="header__logo__short_name">
               {main?.shortNamePartOne}
               <div className="header__logo__long_name"></div>
@@ -86,7 +83,7 @@ const Header = () => {
         >
           <li className="header__link">
             <NavLink
-              to="/harikrishnan-portfolio/about"
+              to="/about"
               className={({ isActive }) =>
                 isActive ? "is_active" : "non_active"
               }
@@ -97,7 +94,7 @@ const Header = () => {
           </li>
           <li className="header__link">
             <NavLink
-              to="/harikrishnan-portfolio/projects"
+              to="/projects"
               className={({ isActive }) =>
                 isActive ? "is_active" : "non_active"
               }
@@ -108,7 +105,7 @@ const Header = () => {
           </li>
           <li className="header__link contact__me">
             <NavLink
-              to="/harikrishnan-portfolio/contact"
+              to="/contact"
               state={{ scrollToDiv: true }}
               className={({ isActive }) =>
                 isActive ? "is_active" : "non_active"
@@ -121,9 +118,7 @@ const Header = () => {
         </ul>
 
         <div className="header__contact_me smallScreen">
-          <a onClick={() => navigate("/harikrishnan-portfolio/contact")}>
-            CONTACT ME
-          </a>
+          <a onClick={() => navigate("/contact")}>CONTACT ME</a>
         </div>
       </header>
     </div>

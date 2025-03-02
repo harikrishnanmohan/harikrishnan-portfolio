@@ -35,7 +35,7 @@ const ShortProjects = () => {
             })}
             <div
               className="shortProjects__projects__learnMore_content"
-              onClick={() => navigate("/harikrishnan-portfolio/projects")}
+              onClick={() => navigate("/projects")}
             >
               <img
                 className="shortProjects__projects__learnMore_arrow"

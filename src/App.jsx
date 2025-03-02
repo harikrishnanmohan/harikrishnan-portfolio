@@ -18,13 +18,25 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/harikrishnan-portfolio",
+      path: "/",
       element: <Main />,
       children: [
-        { path: "/harikrishnan-portfolio", element: <Intro /> },
-        { path: "/harikrishnan-portfolio/projects", element: <Project /> },
-        { path: "/harikrishnan-portfolio/about", element: <About /> },
-        { path: "/harikrishnan-portfolio/contact", element: <ContactMe /> },
+        {
+          path: "",
+          element: <Intro />,
+        },
+        {
+          path: "projects",
+          element: <Project />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+        {
+          path: "contact",
+          element: <ContactMe />,
+        },
       ],
     },
   ]);

@@ -1,7 +1,6 @@
 import { useContext, useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
-import image_1 from "../../assets/image_2.jpg";
 
 import "./Intro.scss";
 import { HarikrishnanContext } from "../../context/harikrishnan-context";

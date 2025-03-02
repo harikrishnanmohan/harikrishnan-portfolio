@@ -13,7 +13,6 @@ import typescript from "../../assets/typescript.svg";
 import css from "../../assets/css.svg";
 import sass from "../../assets/sass.svg";
 
-import hari from "../../assets/hari.jpg";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
 import github from "../../assets/github.svg";
