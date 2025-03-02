@@ -1,0 +1,32 @@
+.education__content {
+  opacity: 0;
+  padding: 5vh 0;
+  &_item {
+    border: 2px solid #2f2f33;
+    background-color: #252525;
+    border-radius: 10px;
+    min-height: 10vh;
+    width: 35vw;
+    padding: $token-space-4;
+    &_title {
+      margin-bottom: 3vh;
+    }
+    &_content {
+      font-size: clamp(1rem, 1vw, 1.5rem);
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .education__content {
+    &_item {
+      min-height: 14rem;
+    }
+  }
+}
+@media (max-width: 445px) {
+  .education__content {
+    &_item {
+      min-height: auto;
+    }
+  }
+}

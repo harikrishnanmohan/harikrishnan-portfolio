@@ -1,0 +1,191 @@
+.about__container {
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1.5;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  .about {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    &__intro {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10vw;
+      margin-top: 3rem;
+      margin-bottom: 6rem;
+      &_profilePic {
+        overflow: hidden;
+        border-radius: 10px;
+        &_pic {
+          width: 20vw;
+          height: 30vw;
+          object-fit: cover;
+          transition: transform 0.5s ease-in-out;
+          border-radius: 10px;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      &_content {
+        display: flex;
+        flex-direction: column;
+        // max-width: 50vw;
+        gap: 3vw;
+        &_data {
+          font-size: clamp(0.9rem, 2vw, 1.75rem);
+          line-height: 3rem;
+        }
+      }
+    }
+    &__techStack {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 3vw;
+      &_icon {
+        height: 4vh;
+        transition: transform 0.5s ease-in-out;
+        opacity: 0;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  .education {
+    &__details {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__title {
+      text-transform: uppercase;
+      .char {
+        margin-right: 2vw;
+        font-weight: 500;
+      }
+    }
+  }
+  .contact {
+    margin-bottom: 2rem;
+
+    &__content {
+      border: 2px solid #2f2f33;
+      background-color: #252525;
+      border-radius: 10px;
+      min-height: 10vh;
+      padding: $token-space-4;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 5vh;
+      .char {
+        margin-right: 2vw;
+        font-weight: 500;
+      }
+    }
+    &__content {
+      opacity: 0;
+      &_item {
+        font-size: clamp(1rem, 1vw, 1.5rem);
+        &_social {
+          margin-top: 2rem;
+          display: flex;
+          gap: 4vw;
+          align-items: center;
+          &_icons {
+            display: inline-block;
+            display: flex;
+            gap: 3vw;
+            width: fit-content;
+            img {
+              height: 30px;
+              width: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .about {
+    &__container {
+      .about {
+        &__intro {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 445px) {
+  .about {
+    &__container {
+      margin: 0;
+      width: 100%;
+      .about {
+        &__intro {
+          flex-direction: column;
+          margin-top: 1rem;
+          margin-bottom: 3rem;
+          align-items: flex-start;
+          &_profilePic {
+            // align-self: flex-start;
+            &_pic {
+              width: 50vw;
+              height: 80vw;
+            }
+          }
+          &_content {
+            max-width: 100%;
+            gap: 2rem;
+            line-height: 1rem;
+          }
+        }
+        &__techStack {
+          &_icon {
+            height: 3vh;
+          }
+        }
+      }
+      .education {
+        &__details {
+          flex-direction: column;
+          margin-bottom: 2rem;
+        }
+        &__content {
+          padding: 1rem 0;
+          &_item {
+            width: auto;
+          }
+        }
+      }
+      .contact {
+        &__title {
+          margin-bottom: 1rem;
+        }
+        &__content {
+          overflow-wrap: break-word;
+          &_item_social {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+      }
+    }
+    .about__intro_content_data {
+      line-height: 1.75rem;
+    }
+  }
+}

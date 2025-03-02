@@ -1,0 +1,76 @@
+.contactMe__container {
+  height: 66vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  .show {
+    display: none;
+  }
+  .contactMe {
+    height: 70vh;
+    &__content {
+      border: 2px solid #fff;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      opacity: 0;
+      width: 100%;
+    }
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 1vw, 5rem);
+    &__connectWithMe {
+      text-transform: uppercase;
+      font-size: clamp(1.75rem, 4vw, 5rem);
+    }
+    &__mail {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: 2px solid #fff;
+      border-radius: 100%;
+      width: 5vw;
+      height: 5vw;
+      padding: 0.3rem;
+      font-size: clamp(0.6rem, 0.8vw, 1rem);
+      cursor: pointer;
+      word-wrap: break-word;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+@media (max-width: 445px) {
+  .contactMe__container {
+    width: 100%;
+    margin-top: 0;
+    .show {
+      .heading {
+        margin-bottom: 2.5rem;
+      }
+    }
+    .contactMe__content {
+      height: 30rem;
+      .contactMe__mail {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+    .contactMe__connectWithMe,
+    .contactMe__contactMe {
+      text-align: center;
+    }
+  }
+}

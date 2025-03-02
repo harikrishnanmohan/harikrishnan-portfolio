@@ -41,6 +41,11 @@ $transition-ease: 0.3s ease-in-out;
       &_icon {
         display: none;
       }
+      &.inView {
+        background: #1c1c1c;
+        padding: 1rem;
+        border-radius: 5px;
+      }
     }
 
     &__link {
@@ -143,6 +148,7 @@ $transition-ease: 0.3s ease-in-out;
 
         &.ofView {
           opacity: 0;
+          display: none;
         }
 
         &_icon {

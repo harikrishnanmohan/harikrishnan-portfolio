@@ -39,11 +39,19 @@ const Header = () => {
       }
     };
 
+    const handleScroll = () => {
+      setShowLinks(false);
+    };
+
     if (showLinks) {
       document.addEventListener("mousedown", handleClickOutside);
+      window.addEventListener("scroll", handleScroll);
     }
 
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [showLinks]);
 
   return (
@@ -54,7 +62,10 @@ const Header = () => {
     >
       <header className="header">
         <h1 className="header__logo">
-          <NavLink className="anchor header__logo_content" to="/">
+          <NavLink
+            className="anchor header__logo_content"
+            to="/harikrishnan-portfolio/"
+          >
             <div className="header__logo__short_name">
               {main?.shortNamePartOne}
               <div className="header__logo__long_name"></div>
@@ -75,7 +86,7 @@ const Header = () => {
         >
           <li className="header__link">
             <NavLink
-              to="/about"
+              to="/harikrishnan-portfolio/about"
               className={({ isActive }) =>
                 isActive ? "is_active" : "non_active"
               }
@@ -86,7 +97,7 @@ const Header = () => {
           </li>
           <li className="header__link">
             <NavLink
-              to="/projects"
+              to="/harikrishnan-portfolio/projects"
               className={({ isActive }) =>
                 isActive ? "is_active" : "non_active"
               }
@@ -97,7 +108,7 @@ const Header = () => {
           </li>
           <li className="header__link contact__me">
             <NavLink
-              to="/contact"
+              to="/harikrishnan-portfolio/contact"
               state={{ scrollToDiv: true }}
               className={({ isActive }) =>
                 isActive ? "is_active" : "non_active"
@@ -110,7 +121,9 @@ const Header = () => {
         </ul>
 
         <div className="header__contact_me smallScreen">
-          <a onClick={() => navigate("/contact")}>CONTACT ME</a>
+          <a onClick={() => navigate("/harikrishnan-portfolio/contact")}>
+            CONTACT ME
+          </a>
         </div>
       </header>
     </div>

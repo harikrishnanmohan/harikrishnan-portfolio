@@ -1,0 +1,18 @@
+.loading {
+  // font-family: "Orbitron";
+  font-family: monospace;
+  background: #fff;
+  height: 100vh;
+  color: #000;
+  &__content {
+    font-size: clamp(1.75rem, 3vw, 5rem);
+    padding-left: 5%;
+    padding-top: 5%;
+  }
+  &__percentage {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-size: clamp(1.75rem, 4vw, 5rem);
+  }
+}
