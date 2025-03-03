@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
 
@@ -13,6 +13,15 @@ const Intro = () => {
   const intro = main?.intro;
   const component = useRef(null);
 
+  useLayoutEffect(() => {
+    gsap.set(".intro__container", { opacity: 0, visibility: "hidden" });
+    gsap.to(".intro__container", {
+      opacity: 1,
+      visibility: "visible",
+      duration: 1,
+      ease: "power2.out",
+    });
+  }, []);
   useEffect(() => {
     let ctx = gsap.context(() => {
       const intro = new SplitType(".intro__word", { type: "char" });

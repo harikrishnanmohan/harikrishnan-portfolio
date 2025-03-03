@@ -21,22 +21,10 @@ function App() {
       path: "/",
       element: <Main />,
       children: [
-        {
-          path: "",
-          element: <Intro />,
-        },
-        {
-          path: "projects",
-          element: <Project />,
-        },
-        {
-          path: "about",
-          element: <About />,
-        },
-        {
-          path: "contact",
-          element: <ContactMe />,
-        },
+        { path: "", element: <Intro /> },
+        { path: "projects", element: <Project /> },
+        { path: "about", element: <About /> },
+        { path: "contact", element: <ContactMe /> },
       ],
     },
   ]);
