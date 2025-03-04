@@ -32,22 +32,26 @@
       {
         "name": "Facebook",
         "url": "https://www.facebook.com/harikrishnan.mohan.75/",
-        "path": "./assets/facebook.svg"
+        "path": "./assets/facebook.svg",
+        "className": "facebook"
       },
       {
         "name": "Linkedin",
         "url": "https://www.linkedin.com/in/harikrishnan-mohan-331840130/",
-        "path": "./assets/linkedin.svg"
+        "path": "./assets/linkedin.svg",
+        "className": "linkedIn"
       },
       {
         "name": "Instagram",
         "url": "https://www.instagram.com/harii__krishnan___",
-        "path": "./assets/instagram.svg"
+        "path": "./assets/instagram.svg",
+        "className": "instagram"
       },
       {
         "name": "Github",
         "url": "https://github.com/harikrishnanmohan",
-        "path": "./assets/github.svg"
+        "path": "./assets/github.svg",
+        "className": "github"
       }
     ]
   },

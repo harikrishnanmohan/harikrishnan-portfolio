@@ -15,7 +15,7 @@ const Footer = () => {
             return (
               <a
                 key={index}
-                className="footer__social_item"
+                className={`footer__social_item ${item.className}`}
                 href={item?.url}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -29,18 +29,32 @@ $color: #fff;
       &_item {
         text-decoration: none;
         color: $color;
-
+        transition: 0.3s ease-out;
         &::after {
           content: "";
           display: block;
           width: 0%;
           height: 2px;
-          background: $color;
           transition: all 0.3s;
         }
-
+        &.facebook::after {
+          background: #1877f2;
+        }
+        &.linkedIn::after {
+          background: #0077b5;
+        }
+        &.instagram::after {
+          background: #d62976;
+        }
+        &.github::after {
+          background: #2b3137;
+        }
         &:hover::after {
           width: 100%;
+        }
+        &:active {
+          transform: scale(0.85);
+          // box-shadow: 0 0 30px white;
         }
       }
     }
