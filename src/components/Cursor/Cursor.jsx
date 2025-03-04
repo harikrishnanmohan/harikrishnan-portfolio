@@ -1,21 +1,28 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import "./Cursor.scss"; // Import your styles
 
 const CustomCursor = () => {
   const bigBall = useRef(null);
   const smallBall = useRef(null);
+  const [isMouseDevice, setIsMouseDevice] = useState(false);
 
   useEffect(() => {
+    // Check if the device has a fine pointer (mouse)
+    const hasMouse = window.matchMedia("(pointer: fine)").matches;
+    setIsMouseDevice(hasMouse);
+
+    if (!hasMouse) return; // If no mouse, do not attach event listeners
+
     const onMouseMove = (e) => {
       gsap.to(bigBall.current, {
-        x: e.clientX - 15, // Keep X same
-        y: e.clientY - 15, // Use clientY instead of pageY
+        x: e.clientX - 15,
+        y: e.clientY - 15,
         duration: 0.4,
       });
       gsap.to(smallBall.current, {
-        x: e.clientX - 5, // Keep X same
-        y: e.clientY - 7, // Use clientY instead of pageY
+        x: e.clientX - 5,
+        y: e.clientY - 7,
         duration: 0.1,
       });
     };
@@ -26,6 +33,8 @@ const CustomCursor = () => {
       document.body.removeEventListener("mousemove", onMouseMove);
     };
   }, []);
+
+  if (!isMouseDevice) return null; // Don't render cursor on touch devices
 
   return (
     <>
