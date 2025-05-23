@@ -29,36 +29,44 @@ const ShortProjects = () => {
             {projects.slice(0, 2).map((item) => {
               return (
                 <div
-                  className="shortProjects__projects_project"
+                  className="shortProjects__projects__item"
                   key={item?.title}
-                  onClick={() => window.open(item.url, "_blank")}
-                  onMouseEnter={() => handleMouseEnter(item.images)}
-                  onMouseLeave={handleMouseLeave}
                 >
-                  <div className="shortProjects__item_slider">
-                    <div
-                      className="shortProjects__item_sliderTrack"
-                      style={{
-                        transform:
-                          isSliding && slideShowImages === item.images
-                            ? `translateX(-${activeIndex * 100}%)`
-                            : "translateX(0)",
-                        transition: isSliding
-                          ? "transform 0.6s ease-in-out"
-                          : "none",
-                      }}
-                    >
-                      {item.images.map((img, index) => (
-                        <img
-                          key={index}
-                          src={img}
-                          alt=""
-                          className="shortProjects__item_image"
-                        />
-                      ))}
+                  <div
+                    className="shortProjects__projects_project"
+                    onClick={() => window.open(item.url, "_blank")}
+                    onMouseEnter={() => handleMouseEnter(item.images)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="shortProjects__item_slider">
+                      <div
+                        className={`shortProjects__item_sliderTrack`}
+                        style={{
+                          transform:
+                            isSliding && slideShowImages === item.images
+                              ? `translateX(-${activeIndex * 100}%)`
+                              : "translateX(0)",
+                          transition: isSliding
+                            ? "transform 0.6s ease-in-out"
+                            : "none",
+                        }}
+                      >
+                        {item.images.map((img, index) => (
+                          <img
+                            key={index}
+                            src={img}
+                            alt=""
+                            className={`shortProjects__item_image ${
+                              !isSliding ? "wiggle-animation" : ""
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <div className="shortProjects__item_title">
+                      {item?.title}
                     </div>
                   </div>
-                  <div className="shortProjects__item_title">{item?.title}</div>
                 </div>
               );
             })}

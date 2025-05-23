@@ -40,7 +40,9 @@ const Project = () => {
                   key={index}
                   src={img}
                   alt=""
-                  className="project__item_image"
+                  className={`project__item_image ${
+                    !isSliding ? "wiggle-animation" : ""
+                  }`}
                 />
               ))}
             </div>

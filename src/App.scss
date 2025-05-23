@@ -16,7 +16,14 @@ body {
   flex-direction: column;
   font-family: Quicksand;
 }
-
+html {
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
 #root {
   display: flex;
   flex-direction: column;

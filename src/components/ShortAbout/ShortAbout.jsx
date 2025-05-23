@@ -11,6 +11,7 @@ import javascript from "../../assets/javascript.svg";
 import typescript from "../../assets/typescript.svg";
 import css from "../../assets/css.svg";
 import sass from "../../assets/sass.svg";
+import tailWind from "../../assets/tailwind.svg";
 
 import white_arrow_with_outline from "../../assets/white_arrow_with_outline.png";
 
@@ -104,6 +105,11 @@ const ShortAbout = () => {
               <img
                 className="shortAbout__intro_content_techStack_icon"
                 src={sass}
+                alt="sass"
+              />
+              <img
+                className="shortAbout__intro_content_techStack_icon"
+                src={tailWind}
                 alt="sass"
               />
             </div>

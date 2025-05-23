@@ -12,6 +12,7 @@ import javascript from "../../assets/javascript.svg";
 import typescript from "../../assets/typescript.svg";
 import css from "../../assets/css.svg";
 import sass from "../../assets/sass.svg";
+import tailWind from "../../assets/tailwind.svg";
 
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
@@ -159,6 +160,11 @@ const About = () => {
               />
               <img className="about__techStack_icon" src={css} alt="css" />
               <img className="about__techStack_icon" src={sass} alt="sass" />
+              <img
+                className="about__techStack_icon"
+                src={tailWind}
+                alt="sass"
+              />
             </div>
           </div>
         </div>

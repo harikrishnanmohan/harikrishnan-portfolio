@@ -20,6 +20,9 @@
         align-items: center;
         max-width: 75%;
         gap: 6vh;
+        &_data {
+          align-self: flex-start;
+        }
         &_techStack {
           width: 100%;
           display: flex;

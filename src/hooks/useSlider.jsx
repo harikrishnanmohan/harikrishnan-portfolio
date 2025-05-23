@@ -15,7 +15,7 @@ export function useSlider() {
       setActiveIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2000);
+    }, 1200);
     setIntervalId(id);
   };
 
